@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BaherindoMotor;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -11,17 +12,9 @@ class AboutController extends Controller
      */
     public function index()
     {
-           $motor = [
-            ['id' => 1, 'foto' => 'onee.jpg', 'nama' => 'Ducati Panigale V4', 'harga' => 980000000, 'tahun'=>2020 , 'km'=>'200KM/H'],
-            ['id' => 2, 'foto' => 'two.ducati.jpg', 'nama' => 'Ducati Monster', 'harga' => 480000000, 'tahun'=>2025, 'km'=>'300KM/H'],
-            ['id' => 3, 'foto' => 'one.bmw.jpg', 'nama' => 'BMW S1000RR', 'harga' => 765000000],
-            ['id' => 4, 'foto' => 'two.bmw.jpg', 'nama' => 'BMW R1250GS', 'harga' => 620000000],
-            ['id' => 5, 'foto' => 'one.harley.jpg', 'nama' => 'Harley Iron 883', 'harga' => 399000000],
-            ['id' => 6, 'foto' => 'two.harley.jpg', 'nama' => 'Harley Street Glide', 'harga' => 850000000],
-        ];
+        $motor = BaherindoMotor::all();
 
-
-        return view(view: 'about', data: compact('motor'));
+        return view('about', compact('motor'));
     
     }
 
