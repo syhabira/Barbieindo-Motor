@@ -2,7 +2,7 @@
       src="https://kit.fontawesome.com/35d8865ade.js"
       crossorigin="anonymous"
     ></script>
-
+{{-- Ilove shabira --}}
 <nav class="bg-white shadow-lg sticky w-full z-20 top-0">
     <div class="max-w-screen-xl mx-auto">
         <div class="flex items-center justify-between h-16">
